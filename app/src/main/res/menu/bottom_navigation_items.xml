@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/action_item1"
+        android:title="AnaSayfa"
+        android:icon="@drawable/home"
+
+        />
+    <item
+        android:id="@+id/action_item2"
+        android:title="Kampanyalar"
+        android:icon="@drawable/campaigning"/>
+
+    <item
+        android:id="@+id/action_item3"
+        android:title="Favoriler"
+        android:icon="@drawable/star"
+        />
+
+    <item
+        android:id="@+id/action_item4"
+        android:title="Ayarlar"
+        android:icon="@drawable/settings"/>
+</menu>

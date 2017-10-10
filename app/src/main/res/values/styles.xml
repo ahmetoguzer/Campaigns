@@ -8,4 +8,9 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="NavigationBottomStyle">
+        <item name="android:textSize">5sp</item>
+        <!-- text size in menu-->
+    </style>
+
 </resources>
