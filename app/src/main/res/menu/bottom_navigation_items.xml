@@ -13,8 +13,8 @@
 
     <item
         android:id="@+id/action_item3"
-        android:title="Favoriler"
-        android:icon="@drawable/star"
+        android:title="Hatırlatıcı"
+        android:icon="@drawable/remindericon"
         />
 
     <item

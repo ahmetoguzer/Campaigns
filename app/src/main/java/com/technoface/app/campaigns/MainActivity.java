@@ -11,6 +11,8 @@ import android.support.design.widget.BottomNavigationView;
 import android.support.design.internal.BottomNavigationMenuView;
 
 import android.view.MenuItem;
+import android.widget.Toolbar;
+
 import com.technoface.app.campaigns.fragments.AnaMenuFragment;
 import com.technoface.app.campaigns.fragments.Hesapfragment;
 import com.technoface.app.campaigns.fragments.MontajlarFragment;
@@ -19,7 +21,8 @@ import com.technoface.app.campaigns.fragments.PuanlarFragment;
 public class MainActivity extends AppCompatActivity {
 
 
-    Boolean isOpenMontaj=true;
+    Boolean isOpenMontaj=false;
+    private Toolbar toolbar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -47,7 +50,6 @@ public class MainActivity extends AppCompatActivity {
                             case R.id.action_item4:
                                 selectedFragment = Hesapfragment.newInstance();
                                 break;
-
                         }
 
                         if(!isOpenMontaj){

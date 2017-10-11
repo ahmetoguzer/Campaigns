@@ -1,17 +1,221 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="5dp">
+    android:orientation="vertical"
+    android:padding="10dp"
+   >
 
    <LinearLayout
        android:layout_width="match_parent"
-       android:layout_height="200dp"
-       android:background="@drawable/background">
+       android:layout_height="wrap_content"
+       android:orientation="vertical">
+      <LinearLayout
+          android:id="@+id/child1"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:background="@drawable/background"
+          android:orientation="vertical"
+          android:layout_marginBottom="10dp">
+
+         <RelativeLayout
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:paddingLeft="5dp"
+             android:weightSum="3">
+
+            <ImageView
+                android:layout_alignParentLeft="true"
+                android:id="@+id/img_bimLogo"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/bimlogo"
+                android:layout_marginRight="5dp"/>
+            <TextView
+                android:layout_centerInParent="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Toptan Fiyatına Perakende Satış"
+                android:textSize="15sp"
+                android:textStyle="bold|italic"
+                />
+
+            <ImageView
+                android:src="@drawable/ic_arrow_right"
+                android:layout_alignParentRight="true"
+                android:id="@+id/img_GoBim"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_marginRight="5dp"/>
+
+         </RelativeLayout>
+
+         <LinearLayout
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:orientation="horizontal"
+             android:weightSum="3"
+             android:padding="5dp">
+
+            <ImageView
+                android:id="@+id/img_bim1"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_weight="1"
+                android:layout_marginRight="5dp"/>
+            <ImageView
+                android:id="@+id/img_bim2"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_weight="1"
+                android:layout_marginRight="5dp"/>
+            <ImageView
+                android:id="@+id/img_bim3"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_weight="1"/>
+
+         </LinearLayout>
+
+
+      </LinearLayout>
+      <LinearLayout
+          android:id="@+id/child3"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:background="@drawable/background"
+          android:orientation="vertical">
+
+         <RelativeLayout
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:paddingLeft="5dp"
+             android:weightSum="3">
+
+            <ImageView
+                android:layout_alignParentLeft="true"
+                android:id="@+id/img_a101Logo"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/alogo"
+                android:layout_marginRight="5dp"/>
+            <TextView
+                android:layout_centerInParent="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Harca Harca Bitmez"
+                android:textSize="15sp"
+                android:textStyle="bold|italic"
+                />
+
+            <ImageView
+                android:src="@drawable/ic_arrow_right"
+                android:layout_alignParentRight="true"
+                android:id="@+id/img_GoA101"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_marginRight="5dp"/>
+
+         </RelativeLayout>
+
+         <LinearLayout
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:orientation="horizontal"
+             android:weightSum="3"
+             android:padding="5dp">
+
+            <ImageView
+                android:id="@+id/img_A101_1"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_weight="1"
+                android:layout_marginRight="5dp"/>
+            <ImageView
+                android:id="@+id/img_A101_2"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_weight="1"
+                android:layout_marginRight="5dp"/>
+            <ImageView
+                android:id="@+id/img_A101_3"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_weight="1"/>
+
+         </LinearLayout>
+
+
+      </LinearLayout>
+      <LinearLayout
+          android:id="@+id/child2"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:background="@drawable/background"
+          android:orientation="vertical"
+          android:layout_marginBottom="10dp">
+
+         <RelativeLayout
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:paddingLeft="5dp"
+             android:weightSum="3">
+
+            <ImageView
+                android:layout_alignParentLeft="true"
+                android:id="@+id/img_sokLogo"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/soklogo"
+                android:layout_marginRight="5dp"/>
+            <TextView
+                android:layout_centerInParent="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Şok Yeter De Artar"
+                android:textSize="15sp"
+                android:textStyle="bold|italic"
+                />
+
+            <ImageView
+                android:src="@drawable/ic_arrow_right"
+                android:layout_alignParentRight="true"
+                android:id="@+id/img_Gosok"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_marginRight="5dp"/>
+
+         </RelativeLayout>
+
+         <LinearLayout
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:orientation="horizontal"
+             android:weightSum="3"
+             android:padding="5dp">
+
+            <ImageView
+                android:id="@+id/img_sok1"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_weight="1"
+                android:layout_marginRight="5dp"/>
+            <ImageView
+                android:id="@+id/img_sok2"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_weight="1"
+                android:layout_marginRight="5dp"/>
+            <ImageView
+                android:id="@+id/img_sok3"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_weight="1"/>
+
+         </LinearLayout>
+      </LinearLayout>
 
    </LinearLayout>
 
-
-</LinearLayout>
+</ScrollView>
