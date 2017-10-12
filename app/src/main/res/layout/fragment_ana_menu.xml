@@ -10,14 +10,17 @@
    <LinearLayout
        android:layout_width="match_parent"
        android:layout_height="wrap_content"
-       android:orientation="vertical">
+       android:orientation="vertical"
+      >
+
       <LinearLayout
           android:id="@+id/child1"
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
           android:background="@drawable/background"
           android:orientation="vertical"
-          android:layout_marginBottom="10dp">
+          android:layout_marginBottom="10dp"
+          >
 
          <RelativeLayout
              android:layout_width="match_parent"
@@ -58,23 +61,29 @@
              android:weightSum="3"
              android:padding="5dp">
 
-            <ImageView
+            <com.github.piasy.biv.view.BigImageView
                 android:id="@+id/img_bim1"
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
                 android:layout_weight="1"
-                android:layout_marginRight="5dp"/>
-            <ImageView
+                android:layout_marginRight="5dp"
+                app:optimizeDisplay="false"
+                app:failureImage="@drawable/ic_cloud_off_white"/>
+            <com.github.piasy.biv.view.BigImageView
                 android:id="@+id/img_bim2"
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
                 android:layout_weight="1"
-                android:layout_marginRight="5dp"/>
-            <ImageView
+                android:layout_marginRight="5dp"
+                app:optimizeDisplay="false"
+                app:failureImage="@drawable/ic_cloud_off_white"/>
+            <com.github.piasy.biv.view.BigImageView
                 android:id="@+id/img_bim3"
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
-                android:layout_weight="1"/>
+                android:layout_weight="1"
+                app:optimizeDisplay="false"
+                app:failureImage="@drawable/ic_cloud_off_white"/>
 
          </LinearLayout>
 
@@ -126,23 +135,29 @@
              android:weightSum="3"
              android:padding="5dp">
 
-            <ImageView
+            <com.github.piasy.biv.view.BigImageView
                 android:id="@+id/img_A101_1"
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
                 android:layout_weight="1"
-                android:layout_marginRight="5dp"/>
-            <ImageView
+                android:layout_marginRight="5dp"
+                app:optimizeDisplay="false"
+                app:failureImage="@drawable/ic_cloud_off_white"/>
+            <com.github.piasy.biv.view.BigImageView
                 android:id="@+id/img_A101_2"
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
                 android:layout_weight="1"
-                android:layout_marginRight="5dp"/>
-            <ImageView
+                android:layout_marginRight="5dp"
+                app:optimizeDisplay="false"
+                app:failureImage="@drawable/ic_cloud_off_white"/>
+            <com.github.piasy.biv.view.BigImageView
                 android:id="@+id/img_A101_3"
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
-                android:layout_weight="1"/>
+                android:layout_weight="1"
+                app:optimizeDisplay="false"
+                app:failureImage="@drawable/ic_cloud_off_white"/>
 
          </LinearLayout>
 
@@ -154,7 +169,8 @@
           android:layout_height="wrap_content"
           android:background="@drawable/background"
           android:orientation="vertical"
-          android:layout_marginBottom="10dp">
+          android:layout_marginBottom="10dp"
+          >
 
          <RelativeLayout
              android:layout_width="match_parent"
@@ -195,23 +211,29 @@
              android:weightSum="3"
              android:padding="5dp">
 
-            <ImageView
+            <com.github.piasy.biv.view.BigImageView
                 android:id="@+id/img_sok1"
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
                 android:layout_weight="1"
-                android:layout_marginRight="5dp"/>
-            <ImageView
+                android:layout_marginRight="5dp"
+                app:optimizeDisplay="false"
+                app:failureImage="@drawable/ic_cloud_off_white"/>
+            <com.github.piasy.biv.view.BigImageView
                 android:id="@+id/img_sok2"
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
                 android:layout_weight="1"
-                android:layout_marginRight="5dp"/>
-            <ImageView
+                android:layout_marginRight="5dp"
+                app:optimizeDisplay="false"
+                app:failureImage="@drawable/ic_cloud_off_white"/>
+            <com.github.piasy.biv.view.BigImageView
                 android:id="@+id/img_sok3"
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
-                android:layout_weight="1"/>
+                android:layout_weight="1"
+                app:optimizeDisplay="false"
+                app:failureImage="@drawable/ic_cloud_off_white"/>
 
          </LinearLayout>
       </LinearLayout>

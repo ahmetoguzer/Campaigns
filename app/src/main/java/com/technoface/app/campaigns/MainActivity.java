@@ -11,8 +11,12 @@ import android.support.design.widget.BottomNavigationView;
 import android.support.design.internal.BottomNavigationMenuView;
 
 import android.view.MenuItem;
-import android.widget.Toolbar;
 
+import android.support.v7.widget.Toolbar;
+
+import com.github.piasy.biv.BigImageViewer;
+import com.github.piasy.biv.loader.fresco.FrescoImageLoader;
+import com.github.piasy.biv.loader.glide.GlideImageLoader;
 import com.technoface.app.campaigns.fragments.AnaMenuFragment;
 import com.technoface.app.campaigns.fragments.Hesapfragment;
 import com.technoface.app.campaigns.fragments.MontajlarFragment;
@@ -27,6 +31,10 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+
+        BigImageViewer.initialize(FrescoImageLoader.with(MainActivity.this));
 
         BottomNavigationView bottomNavigationView = (BottomNavigationView)
                 findViewById(R.id.navigation);

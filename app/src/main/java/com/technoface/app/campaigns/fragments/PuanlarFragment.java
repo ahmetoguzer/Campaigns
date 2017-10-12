@@ -22,9 +22,26 @@ package com.technoface.app.campaigns.fragments;
 
 
 
+import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.util.Log;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+
+import com.dropbox.core.DbxRequestConfig;
+import com.dropbox.core.v2.DbxClientV2;
+import com.github.piasy.biv.BigImageViewer;
+import com.github.piasy.biv.indicator.progresspie.ProgressPieIndicator;
+import com.github.piasy.biv.loader.fresco.FrescoImageLoader;
+import com.github.piasy.biv.loader.glide.GlideImageLoader;
+import com.github.piasy.biv.view.BigImageView;
+import com.technoface.app.campaigns.AppController;
+import com.technoface.app.campaigns.R;
+
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
@@ -42,15 +59,23 @@ public class PuanlarFragment extends Fragment {
         super.onCreate(savedInstanceState);
     }
 
-//    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
-//    @Override
-//    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-//                             Bundle savedInstanceState) {
-//        final View rootview= inflater.inflate(R.layout.fragment_puanlar, container, false);
-//
-//
-//        return rootview;
-//    }
+
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+
+        final View rootview= inflater.inflate(R.layout.fragment_campaigns, container, false);
+
+
+        BigImageView bigImageView =rootview.findViewById(R.id.mBigImage);
+        bigImageView.setProgressIndicator(new ProgressPieIndicator());
+        bigImageView.showImage(
+                Uri.parse(AppController.getInstance().bimlink1)
+        );
+        bigImageView.getSSIV();
+        return rootview;
+    }
+
 
 
     @Override
@@ -59,16 +84,6 @@ public class PuanlarFragment extends Fragment {
 
     }
 
-    public static String getDate(long milliSeconds, String dateFormat)
-    {
-        // Create a DateFormatter object for displaying date in specified format.
-        SimpleDateFormat formatter = new SimpleDateFormat(dateFormat);
-
-        // Create a calendar object that will convert the date and time value in milliseconds to date.
-        Calendar calendar = Calendar.getInstance();
-        calendar.setTimeInMillis(milliSeconds);
-        return formatter.format(calendar.getTime());
-    }
 
 
 

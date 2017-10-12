@@ -24,7 +24,8 @@
         </activity>
         <receiver android:name=".AlarmRecever" >
         </receiver>
-
+        <activity android:name=".FrescoLoaderActivity">
+        </activity>
         <service
             android:name=".services.NotificationService"
             android:enabled="true" />

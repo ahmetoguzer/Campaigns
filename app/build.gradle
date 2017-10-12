@@ -22,8 +22,11 @@ android {
     allprojects {
         repositories {
             maven { url 'https://jitpack.io' }
+            maven { url  "http://dl.bintray.com/piasy/maven" }
+            maven { url "https://maven.google.com" }
         }
     }
+
 }
 
 dependencies {
@@ -49,6 +52,11 @@ dependencies {
 
     compile 'com.github.demoNo:AutoScrollViewPager:v1.0.2'
     compile 'io.realm:realm-android:0.84.1'
+
+    compile 'com.github.piasy:BigImageViewer:1.4.0'
+    compile 'com.github.piasy:FrescoImageLoader:1.4.0'
+    compile 'com.github.piasy:ProgressPieIndicator:1.4.0'
+    compile 'com.github.piasy:GlideImageLoader:1.4.0'
 
     compile files('libs/universal-image-loader-1.9.5.jar')
 
