@@ -1,18 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:attrs="http://schemas.android.com/tools"
     android:background="@android:color/black"
-    android:padding="50dp"
+    android:padding="30dp">
+    <LinearLayout
+    android:id="@+id/frm_ana"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+        android:orientation="vertical"
     >
-    <com.github.piasy.biv.view.BigImageView
-        android:id="@+id/mBigImage"
+    <android.support.v4.view.ViewPager
+        android:id="@+id/pager"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:optimizeDisplay="false"
-        app:failureImage="@drawable/ic_cloud_off_white"
+        android:layout_height="match_parent"  />
+
+    <com.rd.PageIndicatorView
+        android:id="@+id/pageIndicatorView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        attrs:piv_viewPager="@id/pager"
+        attrs:piv_selectedColor="#FF8000"
+        attrs:piv_unselectedColor="#FF8000"
+        android:layout_gravity="center"
+
         />
+</LinearLayout>
+
 
 </RelativeLayout>

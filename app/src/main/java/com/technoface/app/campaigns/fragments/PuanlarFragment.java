@@ -27,6 +27,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v4.view.ViewPager;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -39,15 +40,19 @@ import com.github.piasy.biv.indicator.progresspie.ProgressPieIndicator;
 import com.github.piasy.biv.loader.fresco.FrescoImageLoader;
 import com.github.piasy.biv.loader.glide.GlideImageLoader;
 import com.github.piasy.biv.view.BigImageView;
+import com.rd.PageIndicatorView;
+import com.rd.animation.type.AnimationType;
 import com.technoface.app.campaigns.AppController;
 import com.technoface.app.campaigns.R;
+import com.technoface.app.campaigns.adapters.AnaMenuPagerAdapter;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
 
 public class PuanlarFragment extends Fragment {
-
+    private ViewPager pager;
+    private PageIndicatorView indicator;
 
     public static PuanlarFragment newInstance() {
         PuanlarFragment fragment = new PuanlarFragment();
@@ -67,12 +72,12 @@ public class PuanlarFragment extends Fragment {
         final View rootview= inflater.inflate(R.layout.fragment_campaigns, container, false);
 
 
-        BigImageView bigImageView =rootview.findViewById(R.id.mBigImage);
-        bigImageView.setProgressIndicator(new ProgressPieIndicator());
-        bigImageView.showImage(
-                Uri.parse(AppController.getInstance().bimlink1)
-        );
-        bigImageView.getSSIV();
+        pager = (ViewPager) rootview.findViewById(R.id.pager);
+        AnaMenuPagerAdapter adapter = new AnaMenuPagerAdapter(getActivity());
+        pager.setAdapter(adapter);
+        indicator = (PageIndicatorView)rootview.findViewById(R.id.pageIndicatorView);
+        indicator.setViewPager(pager);
+        indicator.setAnimationType(AnimationType.FILL);
         return rootview;
     }
 

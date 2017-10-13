@@ -58,6 +58,8 @@ dependencies {
     compile 'com.github.piasy:ProgressPieIndicator:1.4.0'
     compile 'com.github.piasy:GlideImageLoader:1.4.0'
 
+    compile 'com.romandanylyk:pageindicatorview:0.2.0@aar'
+
     compile files('libs/universal-image-loader-1.9.5.jar')
 
 
